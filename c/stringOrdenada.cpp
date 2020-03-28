@@ -26,8 +26,6 @@ typedef struct no {
 }no;
 
 
-
-
 int main(){    
     int qtd;    
     cin >> qtd;
