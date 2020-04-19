@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    
+    int leitor;
+
+    while(true){
+        cin >> leitor;
+        if(!leitor) break;
+        int maior = -1 , segmaior = -1, numeroAtual = 0;
+        int posMaior = -1 , posSegMaior = -1;
+
+        for (int i = 1; i <=leitor; i++)
+        {
+            cin >> numeroAtual;
+
+            if(numeroAtual > maior){
+                segmaior = maior;
+                maior = numeroAtual;
+                posSegMaior = posMaior;
+                posMaior = i;
+
+            }else if(numeroAtual > segmaior ){
+                segmaior = numeroAtual;
+                posSegMaior = i;
+            }
+
+        }
+        
+        if (segmaior == -1) posSegMaior = posMaior;
+
+        cout << posSegMaior << endl;
+    
+        
+    }
+
+    return 1;
+}
